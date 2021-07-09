@@ -2,7 +2,7 @@ function compute()
 {
     var amountnumber = document.getElementById("amountnumber").value;
 
-    if(amountnumber == "" || amountnumber < 0)
+    if(amountnumber == "" || amountnumber <= 0)
     {
         alert("Enter a positive number of amount");
         document.getElementById("amountnumber").focus();

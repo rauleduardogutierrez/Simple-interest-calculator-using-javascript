@@ -1,21 +1,77 @@
+<!DOCTYPE html>
 <html>
     <head>
-	<title>Web App for Simple Interest Calculation</title>
-    <script type="text/javascript" src="script.js"></script>
+    <title>Simple Interest Calculator</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-xzOAaQoAFbEcZNS6M0FhrrMixVobRHClN1TF0qSnN9Gx6TPKzkZHxXCrtCQrdjBKIksvC9Pt3oL9uCEBW0lgdi_jQBRz8nCP8i1WfBqU4kDJjxyy-SeHztcYmypOVju2x_eRUMeFJqPZ_VwqZZv4k2zw_cbRQ_WvIpxmQx7EfGyxwTb24aspnG2UQBVVbbNcTrhuQvYL4VZcgXgUVbejg" charset="UTF-8"></script><script type="text/javascript"></script>
+    <script src="script.js"></script>
 
     <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <h1 align="center">Simple Interest Calculator</h1>
-<div>
-        Amount: <input id="p"><br/>
-        Rate: <input id="r"><br/>
-        No. of Years: <input id="n"><br/>
+        <div class="div1">
+            <h1>Simple Interest Calculator</h1>
 
-        <button onclick="calculate()">Calculate</button>
+            <div class="div2">
+                <table id="table">
+                    <tbody>
+                        <tr>
+                            <td  class="labels">Amount</td>
+                            <td class="labels"></td>
 
-        <p id="result"></p>
-		</div>
+
+                            <td>
+                                <input type="number" id="amountnumber">
+                            </td>
+
+                        </tr>
+
+                        <br>
+                        <tr>
+                            <td class="labels">Interest Rate</td>
+                            <td class="labels"></td>
+
+                            <td>
+                                <input type="range" id="num" min="1" max="20" step="0.01" value="10.50" name="num" onchange="SliderValue()">
+                                <span id="rate_display">10.50%</span>
+
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td class="labels">No. of Years</td>
+                            <td></td>
+
+                            
+                            <td>
+                                <select name="years" id="years">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>
+                                <button type="button" id="compute"  onclick="compute()">Compute Interest</button>
+                                <span id="result">
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <td class="labels" >© Everyone Can Get Rich</td>
+        </div>
     </body>
 </html>
